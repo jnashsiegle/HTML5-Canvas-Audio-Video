@@ -3,6 +3,46 @@ window.onload = function() {
 	if (theCanvas && theCanvas.getContext) {
 	var ctx = theCanvas.getContext("2d");
 	if (ctx) {
+
+		//create variables for our x, y, radius and offset
+		var x = theCanvas.width/2;
+		var y = theCanvas.height/2;
+		var radius = 75;
+		var offset = 50;
+
+		ctx.save();  
+
+		ctx.beginPath();
+		ctx.arc(x, y, radius, 0, 2*Math.PI, false); //false makes it clock-wise
+		ctx.clip();
+
+		//Draw a blue circle inside of the clipping mask
+		ctx.beginPath();
+		ctx.arc(x-offset, y-offset, radius, 0, 2*Math.PI, false);
+		ctx.fillStyle = "blue";
+		ctx.fill();
+
+		//Draw a yellow circle inside of the clipping mask
+		ctx.beginPath();
+		ctx.arc(x+offset, y, radius, 0, 2*Math.PI, false);
+		ctx.fillStyle = "yellow";
+		ctx.fill();
+
+		//Draw a red circle inside of the clipping mask
+		ctx.beginPath();
+		ctx.arc(x, y+offset, radius, 0, 2*Math.PI, false);
+		ctx.fillStyle = "red";
+		ctx.fill();
+
+		ctx.restore(); //sets back to initial save point so we can stroke outside of circle
+
+		//stroke the circle
+
+		ctx.beginPath();
+		ctx.arc(x,y, radius, 0, 2*Math.PI, false);
+		ctx.lineWidth = 10;
+		ctx.strokeStyle = "orange"
+		ctx.stroke();
   			
 		
      						
