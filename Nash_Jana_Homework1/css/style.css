@@ -1,0 +1,16 @@
+body{
+	background-color: #eee;
+}
+h1 {
+	font-family: Georgia;
+}
+
+canvas {
+        	border: 5px solid #fafafa;
+        	background:url(../image/extra_clean_paper.png), no-repeat;
+        	border-radius: 25px;        	
+			-webkit-box-shadow: 17px 19px 35px -7px rgba(71,65,71,0.55);
+			-moz-box-shadow: 17px 19px 35px -7px rgba(71,65,71,0.55);
+			box-shadow: 17px 19px 35px -7px rgba(71,65,71,0.55);
+			margin: 20px 0 30px 50px;
+        }

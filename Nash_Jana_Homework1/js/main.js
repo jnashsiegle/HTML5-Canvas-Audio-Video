@@ -1,7 +1,7 @@
 /*
-     Name:
-     Date:
-     Class & Section:  WIA-####
+     Name: Jana Nash-Siegle
+     Date: 7-8-2015
+     Class & Section:  WIA-1501
      Comments: "HTML5 Canvas Drawing"
  */
 
@@ -21,7 +21,10 @@ FILE SETUP
 // Link the main.js file
 // Setup the call to that canvas and get it's 2d context
 //Use Modernizr to verify that your browser supports canvas, include a fallback message
-
+*/
+window.onload = function(){  //Load up our script in preparation of each canvas content
+        		
+        	
 
 /*******************************************
 PART 1
@@ -34,7 +37,14 @@ Set the stroke color to black and the dimension of the stroke are the same as th
 Reminder - set the style first then draw.
 ********************************************/
 
-//Draw Rectangle here
+var theCanvas = document.getElementById("Canvas1");  
+        		if(theCanvas){
+        			//Get Context
+        			var ctx = theCanvas.getContext("2d");
+        			if(ctx){
+        				//code goes here
+        			}
+        		}
 
 
 /*******************************************
@@ -125,3 +135,6 @@ You must use at least 3 different methods.
 // Draw scene here
 
 
+}//closing script bracket
+
+        	console.log(Modernizr);  //let's see what Modernizr is checking
