@@ -1,8 +1,9 @@
 body{
 	background-color: #eee;
 }
-h1 {
+h1, h2 {
 	font-family: Georgia;
+	margin-left: 50px;
 }
 
 canvas {
