@@ -42,7 +42,16 @@ var theCanvas = document.getElementById("Canvas1");
         			//Get Context
         			var ctx = theCanvas.getContext("2d");
         			if(ctx){
-        				//code goes here
+        				//setting style
+        				ctx.strokeStyle = "black";
+        				ctx.fillStyle = "blue";
+        				ctx.lineWidth = "10";
+
+        				//draw rectangle
+        				ctx.strokeRect(0,0, 50, 100);
+        				ctx.fillRect(0,0, 50, 100);
+        				
+
         			}
         		}
 
