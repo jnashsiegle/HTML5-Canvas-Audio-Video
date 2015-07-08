@@ -23,7 +23,7 @@ FILE SETUP
 //Use Modernizr to verify that your browser supports canvas, include a fallback message
 */
 window.onload = function(){  //Load up our script in preparation of each canvas content
-        		
+         		
         	
 
 /*******************************************
@@ -36,8 +36,7 @@ Set the stroke color to black and the dimension of the stroke are the same as th
 
 Reminder - set the style first then draw.
 ********************************************/
-
-var theCanvas = document.getElementById("Canvas1");  
+	var theCanvas = document.getElementById("Canvas1"); 
         		if(theCanvas){
         			//Get Context
         			var ctx = theCanvas.getContext("2d");
@@ -49,9 +48,7 @@ var theCanvas = document.getElementById("Canvas1");
 
         				//draw rectangle
         				ctx.strokeRect(0,0, 50, 100);
-        				ctx.fillRect(0,0, 50, 100);
-        				
-
+        				ctx.fillRect(0,0, 50, 100); 
         			}
         		}
 
@@ -69,7 +66,31 @@ Use the arc method
 ********************************************/
 
 
-//Draw Circle here
+var theCanvas = document.getElementById("Canvas2");  
+        		if(theCanvas){
+        			//Get Context
+        			var ctx = theCanvas.getContext("2d");
+        			if(ctx){
+        				//setting style
+        				ctx.strokeStyle = "black";
+        				ctx.fillStyle = "rgba(255, 0, 0, .5)";
+        				ctx.lineWidth = "2";
+
+        				//draw circle
+        				var degrees = 360;
+        				var radians = (degrees / 180)*Math.PI;
+
+        				ctx.beginPath();
+        				ctx.arc(50, 50, 30, 0, radians);
+        				ctx.fill();
+        				ctx.stroke();
+
+        				//I didn't understand the instructions using 2 different radius' for one circle
+        				//I used the 30 only because it was bigger
+        				
+
+        			}
+        		}
 
 
 
