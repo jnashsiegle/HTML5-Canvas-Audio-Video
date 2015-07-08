@@ -84,11 +84,6 @@ var theCanvas = document.getElementById("Canvas2");
         				ctx.arc(50, 50, 30, 0, radians);
         				ctx.fill();
         				ctx.stroke();
-
-        				//I didn't understand the instructions using 2 different radius' for one circle
-        				//I used the 30 only because it was bigger
-        				
-
         			}
         		}
 
@@ -107,7 +102,35 @@ Height and width and color are up to you.
 ********************************************/
 
 
-//Draw Star here
+var theCanvas = document.getElementById("Canvas3");  
+        		if(theCanvas){
+        			//Get Context
+        			var ctx = theCanvas.getContext("2d");
+        			if(ctx){
+        				//setting style
+        				ctx.strokeStyle = "blue";
+        				ctx.fillStyle = "red";
+        				ctx.lineWidth = "2";
+
+        				//draw star
+        				ctx.beginPath();
+        				ctx.moveTo(100, 100);
+        				ctx.lineTo(150, 25);//top point
+        				ctx.lineTo(200, 100);//top point
+        				ctx.lineTo(275, 100);//right horizontal
+        				ctx.lineTo(220, 150);//right point diagonal
+        				ctx.lineTo(225, 220);//right bottom point
+        				ctx.lineTo(150, 175);//right bottom point to leftwards
+        				ctx.lineTo(75, 220);//left bottom point
+        				ctx.lineTo(85, 150);//left bottom point upwards
+        				ctx.lineTo(25, 100);//left horizontal
+        				
+						ctx.closePath();
+						ctx.fill();
+						ctx.stroke();
+        				
+        			}
+        		}
 
 
 /*******************************************
