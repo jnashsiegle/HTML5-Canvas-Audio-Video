@@ -115,15 +115,15 @@ var theCanvas = document.getElementById("Canvas3");
         				//draw star
         				ctx.beginPath();
         				ctx.moveTo(100, 100);
-        				ctx.lineTo(150, 25);//top point
-        				ctx.lineTo(200, 100);//top point
-        				ctx.lineTo(275, 100);//right horizontal
-        				ctx.lineTo(220, 150);//right point diagonal
-        				ctx.lineTo(225, 220);//right bottom point
-        				ctx.lineTo(150, 175);//right bottom point to leftwards
-        				ctx.lineTo(75, 220);//left bottom point
-        				ctx.lineTo(85, 150);//left bottom point upwards
-        				ctx.lineTo(25, 100);//left horizontal
+        				ctx.lineTo(150, 25);//top point upward
+        				ctx.lineTo(200, 100);//top point downward
+        				ctx.lineTo(295, 100);//right horizontal
+        				ctx.lineTo(220, 170);//right point diagonal
+        				ctx.lineTo(245, 260);//right bottom point
+        				ctx.lineTo(150, 205);//right bottom point to leftwards
+        				ctx.lineTo(55, 260);//left bottom point
+        				ctx.lineTo(80, 170);//left bottom point upwards
+        				ctx.lineTo(5, 100);//left horizontal
         				
 						ctx.closePath();
 						ctx.fill();
