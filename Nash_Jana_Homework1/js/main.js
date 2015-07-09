@@ -296,7 +296,63 @@ You must use at least 3 different methods.
 
 ********************************************/
 
-// Draw scene here
+var theCanvas = document.getElementById("Canvas8");  //Due to size of image completed in 2 canvases
+                if(theCanvas){
+                    //Get Context
+                    var ctx = theCanvas.getContext("2d");
+                    if(ctx){
+
+                    var canvasWidth=1100;
+                    var canvasHeight=800;
+                    theCanvas.setAttribute("width",canvasWidth);
+                    theCanvas.setAttribute("height",canvasHeight);
+
+                        //add sky background
+                    var skyGradient = ctx.createLinearGradient(0,0,0,canvasHeight);
+                      skyGradient.addColorStop(0,"#00aaff");
+                      skyGradient.addColorStop(1,"#ffffff");
+
+                      ctx.fillStyle = skyGradient;
+                      ctx.fillRect(0,0,canvasWidth,canvasHeight);
+
+                      //add sun
+
+                      var radGrad = ctx.createRadialGradient(925, 150, 20, 925, 150, 100);
+                        
+                        //Add color stops
+                        radGrad.addColorStop(0, "rgba(253, 184, 19, 1");
+                        radGrad.addColorStop(0.1, "rgba(253, 184, 19, .9)");
+                        radGrad.addColorStop(0.2, "#fdff00");
+                        radGrad.addColorStop(0.3, "#fdff00");
+                        radGrad.addColorStop(0.4, "rgba(254,255,127, 1)");
+                        radGrad.addColorStop(0.6, "rgba(254,255,127, 1)");
+                        radGrad.addColorStop(0.8, "rgba(254,255,127, .75)");
+                        radGrad.addColorStop(0.9, "rgba(254,255,127, .45)");
+                        radGrad.addColorStop(1, "rgba(254,255,127, .01)");
+
+                        ctx.fillStyle = radGrad;
+
+                        ctx.beginPath();
+                        ctx.arc(925, 150, 100, 0, 2*Math.PI);
+                        ctx.fill();
+
+                    // add ocean floor
+                        var oceanGradient = ctx.createLinearGradient(0, 1100, 0, 0); 
+
+                        //Add color stops
+                        oceanGradient.addColorStop(0, "#1A2980");                        
+                        oceanGradient.addColorStop(1, "#26D0CE");
+
+                        ctx.strokeStyle = oceanGradient;
+                        ctx.lineWidth = "5";
+                        ctx.fillStyle = oceanGradient;
+
+                        ctx.fillRect(0, 550, 1100, 300);
+                        ctx.strokeRect(0, 550, 1100, 300);
+
+
+                    }
+                }
 
 
 
