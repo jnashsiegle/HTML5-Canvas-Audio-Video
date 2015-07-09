@@ -42,8 +42,8 @@ Reminder - set the style first then draw.
         			var ctx = theCanvas.getContext("2d");
         			if(ctx){
         				//setting style
+                        ctx.fillStyle = "blue";
         				ctx.strokeStyle = "black";
-        				ctx.fillStyle = "blue";
         				ctx.lineWidth = "10";
 
         				//draw rectangle
@@ -72,8 +72,8 @@ var theCanvas = document.getElementById("Canvas2");
         			var ctx = theCanvas.getContext("2d");
         			if(ctx){
         				//setting style
+                        ctx.fillStyle = "rgba(255, 0, 0, .5)";
         				ctx.strokeStyle = "black";
-        				ctx.fillStyle = "rgba(255, 0, 0, .5)";
         				ctx.lineWidth = "2";
 
         				//draw circle
@@ -109,8 +109,8 @@ var theCanvas = document.getElementById("Canvas3");
         			var ctx = theCanvas.getContext("2d");
         			if(ctx){
         				//setting style
+                        ctx.fillStyle = "red";
         				ctx.strokeStyle = "blue";
-        				ctx.fillStyle = "red";
         				ctx.lineWidth = "2";
 
         				//draw star
@@ -152,8 +152,8 @@ var theCanvas = document.getElementById("Canvas4");
         			var ctx = theCanvas.getContext("2d");
         			if(ctx){
         				//setting style
+                        ctx.fillStyle = "yellow";
         				ctx.strokeStyle = "orange";
-        				ctx.fillStyle = "yellow";
         				ctx.lineWidth = "3";
 
         			var degrees = "180";
@@ -167,8 +167,7 @@ var theCanvas = document.getElementById("Canvas4");
 
         				//draw scallops	
 
-        				//draw path to clip from 				
-						
+        				//draw path to clip from 
         				ctx.beginPath();
         				ctx.moveTo(200, 162);
         				ctx.quadraticCurveTo(250, 135, 300, 162);
@@ -199,7 +198,36 @@ Draw text into your canvas.  It can said whatever you would like in any color.
 
 ********************************************/
 
-//Draw text here
+var theCanvas = document.getElementById("Canvas5");  
+                if(theCanvas){
+                    //Get Context
+                    var ctx = theCanvas.getContext("2d");
+                    if(ctx){
+
+                        var theString = "Why do people not like me?"
+                        var theString1 = "I am a mere font!"
+
+                        //setting style
+                        ctx.font = "35pt Comic Sans MS"
+                        ctx.fillStyle = "#FF0000";
+                        ctx.baseline = "alphabetic";
+                        ctx.strokeStyle = "#00004C";                        
+                        ctx.lineWidth = "2";
+
+                        //draw shadow
+                        ctx.shadowColor = "#6666FF";
+                        ctx.shadowOffsetX = -10; 
+                        ctx.shadowOffsetY = -5; 
+                        ctx.shadowBlur = 10;
+
+                        //draw text
+                        ctx.fillText(theString, 50, 100);
+                        ctx.fillText(theString1, 50, 200);
+                        ctx.strokeText(theString, 50, 100);
+                        ctx.strokeText(theString1, 50, 200);
+                    }
+
+                }
 
 /*******************************************
 PART 6
@@ -214,9 +242,48 @@ Reminder to use the drawImage method for all 3 of the ways.
 
 ********************************************/
 
-//Draw images here
+var theCanvas = document.getElementById("Canvas6");  //Due to size of image completed in 2 canvases
+                if(theCanvas){
+                    //Get Context
+                    var ctx = theCanvas.getContext("2d");
+                    if(ctx){
 
+                        var srcImg = document.getElementById("img1");
+                        
+                        //setting style
+                        
 
+                        
+                        //draw image  - totally doesn't fit 3300x1088
+                        ctx.drawImage(srcImg, 0,0);//loads the whole image into the canvas
+
+                        //draw image again scaled down by 1/2
+
+                        ctx.drawImage(srcImg, 5, 5, 1650, 544);//scales image above by half
+                    }
+                }
+/*******************************************
+Part 6
+Image in re-scaled size to fit within canvas
+3. Slice a section of the logo out and draw that onto the canvas.
+********************************************/
+var theCanvas = document.getElementById("Canvas7");  //Due to size of image completed in 2 canvases
+                if(theCanvas){
+                    //Get Context
+                    var ctx = theCanvas.getContext("2d");
+                    if(ctx){
+
+                        var srcImg = document.getElementById("img1");
+                        
+                        //setting style    
+
+                        //draw image again scaled to fit (25%)
+                        ctx.drawImage(srcImg, 5, 5, 825, 272);
+
+                        //draw sliced Web Animation Wording
+                        ctx.drawImage(srcImg, 200, 165, 3200, 300, 0, 450, 1000, 100)
+                    }
+                }
 
 /*******************************************
 PART 7
