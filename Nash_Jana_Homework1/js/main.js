@@ -85,6 +85,7 @@ var theCanvas = document.getElementById("Canvas2");
         				ctx.fill();
         				ctx.stroke();
         			}
+
         		}
 
 
@@ -145,7 +146,50 @@ Do not overlap any other object.
 
 ********************************************/
 
-//Draw Umbrella top here
+var theCanvas = document.getElementById("Canvas4");  
+        		if(theCanvas){
+        			//Get Context
+        			var ctx = theCanvas.getContext("2d");
+        			if(ctx){
+        				//setting style
+        				ctx.strokeStyle = "orange";
+        				ctx.fillStyle = "yellow";
+        				ctx.lineWidth = "3";
+
+        			var degrees = "180";
+        			var radians = (degrees / 180)*Math.PI; 
+
+        				//draw umbrella top
+        				ctx.beginPath();
+        				ctx.arc(ctx.canvas.width/2, ctx.canvas.height/2 + 10, 150, 0, radians, true); //will set into center of canvas	
+        				ctx.fill();
+        				ctx.stroke();
+
+        				//draw scallops	
+
+        				//draw path to clip from 				
+						
+        				ctx.beginPath();
+        				ctx.moveTo(200, 162);
+        				ctx.quadraticCurveTo(250, 135, 300, 162);
+        				ctx.quadraticCurveTo(350, 135, 400, 162);
+        				ctx.quadraticCurveTo(450, 135, 500, 162);
+
+        				// remove fill from half circle
+						ctx.globalCompositeOperation = 'destination-out';
+						ctx.fill(); 
+
+						// reset mode to default so we can add stroke
+						ctx.globalCompositeOperation = 'source-over';
+						ctx.beginPath();
+        				ctx.moveTo(200, 162);
+        				ctx.quadraticCurveTo(250, 135, 300, 162);
+        				ctx.quadraticCurveTo(350, 135, 400, 162);
+        				ctx.quadraticCurveTo(450, 135, 500, 162); 
+        				ctx.stroke();
+        				
+        			}        			
+        		}
 
 /*******************************************
 PART 5
@@ -188,6 +232,10 @@ You must use at least 3 different methods.
 // Draw scene here
 
 
-}//closing script bracket
+
 
         	console.log(Modernizr);  //let's see what Modernizr is checking
+
+
+
+      }//closing script bracket
