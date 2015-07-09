@@ -350,7 +350,70 @@ var theCanvas = document.getElementById("Canvas8");  //Due to size of image comp
                         ctx.fillRect(0, 550, 1100, 300);
                         ctx.strokeRect(0, 550, 1100, 300);
 
+                    //add clouds
+                        var srcImg2 = document.getElementById("img2");
+                                             
+                        //draw image  
+                        ctx.drawImage(srcImg2, 0,0); //left cloudbank
+                        ctx.drawImage(srcImg2, 1000, 0, 500/2, 323/2);
 
+                        //slice part of cloudbank                                         
+                        ctx.drawImage(srcImg2, 250, 200, 200, 225, 400, 100, 500, 350);
+
+                    //draw boat
+
+                        //setting style
+                        ctx.fillStyle = "#996515";
+                        ctx.strokeStyle = "orange";
+                        ctx.lineWidth = "3";                    
+
+                        //draw bottom of boat
+                        
+                        ctx.lineWidth = 2;
+                        ctx.beginPath();
+                        ctx.moveTo(800,525);
+                        ctx.lineTo(845,545);
+                        ctx.lineTo(925,545);
+                        ctx.lineTo(950,525);
+                        ctx.closePath();
+                        ctx.stroke();
+                        ctx.fill();
+
+                        //pole for sails
+
+                        ctx.strokeStyle = "#b5651d"
+                        ctx.beginPath();
+                        ctx.moveTo(875, 525);
+                        ctx.lineTo(875, 425);
+                        ctx.stroke();
+
+                        //left sail
+                        ctx.fillStyle = "#00FF00";
+                        ctx.strokeStyle = "#006600"
+                        ctx.lineWidth = 1;
+                        ctx.beginPath();                        
+                        ctx.moveTo(878,425);
+                        ctx.lineTo(878,525);
+                        ctx.lineTo(955,515);
+                        ctx.closePath();
+                        ctx.fill();
+                        ctx.stroke();
+
+                        //right sail
+                        ctx.fillStyle = "red";
+                        ctx.strokeStyle = "dark red";
+                        ctx.beginPath();
+                        ctx.moveTo(873,425);
+                        ctx.lineTo(873,525);
+                        ctx.lineTo(825,515);
+                        ctx.closePath();
+                        ctx.fill();
+                        ctx.stroke();
+
+
+                        
+
+                        
                     }
                 }
 
