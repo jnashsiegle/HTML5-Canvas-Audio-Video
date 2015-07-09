@@ -410,6 +410,22 @@ var theCanvas = document.getElementById("Canvas8");  //Due to size of image comp
                         ctx.fill();
                         ctx.stroke();
 
+                    //seagulls
+                        
+                        ctx.strokeStyle = "#545454"
+                        ctx.lineWidth = "3";
+                        ctx.beginPath();
+                        ctx.moveTo(300, 350);
+                        ctx.quadraticCurveTo(315, 335, 310, 350);
+                        ctx.quadraticCurveTo(320, 335, 315, 350);                        
+                        ctx.stroke();
+
+                    //fish
+                    var srcImg3 = document.getElementById("img3");
+                        ctx.drawImage(srcImg3, 260, 310, 515, 481, 250, 575, 500/3, 700/3);
+                        ctx.drawImage(srcImg3, 508, 554, 773, 551, 800, 600, 271, 189 );
+
+
 
                         
 
