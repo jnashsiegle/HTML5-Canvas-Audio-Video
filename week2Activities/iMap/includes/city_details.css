@@ -1,0 +1,60 @@
+.clear_both{
+	clear:both;
+}
+
+.map_container .detail_container {
+	position: absolute;
+	top: 35px;
+	left: 480px;
+	width: 240px;
+	height: 260px;
+}
+
+.map_container .city_detail {
+	position: absolute;
+	top: 0;
+	width: 230px;
+	padding: 10px 0 0 12px;
+	border-left: 1px solid #a9b5c8;
+	border-top: 1px solid #a9b5c8;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+}
+
+.map_container .city_detail .city_photo {
+	float: left;
+	margin: 0 15px 0 0;
+	border: 1px solid #fff;
+	border-radius: 8px;
+	box-shadow: 0 5px 3px #4e5d74;
+	-webkit-box-shadow: 0 5px 3px #4e5d74;
+	-moz-box-shadow: 0 5px 3px #4e5d74;
+	-webkit-border-radius: 8px;
+}
+
+.map_container .city_detail .city_info {
+	width: 130px;
+	float: left;
+}
+
+.map_container h2 {
+	margin: 0;
+	font-size: 18px;
+	font-weight: bold;
+}
+.map_container h3 {
+	margin: 0 0 12px 0;
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	color: #2c3748;
+}
+
+.map_container p {
+	margin: 0 0 12px 0;
+}
+}
+}
+}
+}
