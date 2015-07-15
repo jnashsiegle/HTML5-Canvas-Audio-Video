@@ -1,0 +1,59 @@
+/*
+  Demo Styles: NOT REQUIRED
+*/
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+h1,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  height: 100px;
+  width: 100%;
+  background-color: yellow;
+  color: black;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  /*top: 10px;
+  left: 10px;*/
+}
+
+section,
+section > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #EFEFEF;
+}
+
+.full-screen {
+  height: 100%;
+  /* makes panels the entire window height */
+}
+
+.blue {
+  background-color: #3883d8;
+}
+
+.red {
+  background-color: #cf3535;
+}
+.black {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+#fadein-trigger > div {
+  height: 400px;
+  opacity: 0;
+}
