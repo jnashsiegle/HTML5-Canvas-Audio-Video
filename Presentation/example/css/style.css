@@ -1,59 +1,115 @@
-/*
-  Demo Styles: NOT REQUIRED
-*/
-html,
-body {
-  margin: 0;
-  height: 100%;
-}
+html{
+  height: 100%;  
+    }
+body{ 
+  font-family: Verdana, sans-serif;
+  min-height: 100%;
+  background: #716d64 url("../images/fruit.png") no-repeat fixed ;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+  }
 
-h1,
-p {
-  margin: 0;
-  padding: 0;
+ul, li, h3, h2, h1, p,  #content,.category{
+  padding:0;
+  margin:0;
+  list-style:none;
+    }
+h1{
+  margin:20px 0 0 50px;
+  float: left;
+  color:#5B739C;
+  vertical-align: baseline;
+  }      
+h2.title{
+  margin: 20px 50px 0 0;
+  float: right;
+  color:#933;
+  vertical-align: baseline;
+  }
+#main{
+  position: absolute;
+   top: 50%;
+   margin-top: -200px;/* half of #content height*/
+   left: 25%;
+   width: 100%;
 }
+#content{
+  overflow:hidden;
+  width:630px;
+  background-color: rgba(255, 255, 204, .75);
+  position:relative;
+  height:400px;
+  float:left;
+    }
+  #content h2{
+    color:#993333;
+    margin:20px 0pt;
+  }
+  #content a{
+    color:#777;
+    font-weight:bolder;
+    text-decoration:none;
+  }
+nav{
+  display: table;
+  padding-top: 65px; 
+  left: 25%;
+   }             
+  nav a{
+    clear:both;
+    color:black;
+    font-weight: bold;
+    text-decoration:none; 
+    }  
+  nav ul {
+    list-style-type: none;  
+    width: 630px;
+    height: 24px;
+    background-color: white;
+    padding-left: 45px;  
+    }
+  nav ul li {
+    display: inline;    
+    }
+  
+.category{
+  width:1900px;
+  position:relative;
+  }    
+  .category .item{
+    position:relative;
+    float:left;
+    padding:9px 21px 42px 45px;
+    width:567px;
+    height:352px;
+    }
+  .category .item p{
+    width:550px;
+    margin:16px 0;
+    font-size:85%;
+    line-height:1.4em;
+    }
+  .category .next, .category .prev{
+    font-size:18px;
+    position:absolute;
+    bottom:15px;
+    letter-spacing:-2px;
+  }
+  .category .next{
+    right:30px;
+    }
+    .category .prev{
+    left:30px;
+    }  
+footer{      
+  width:100%;
+  height:30px;
+  position:absolute;
+  bottom:0;
+  left:30px;
+  color:white;
+}
+    
 
-nav {
-  height: 100px;
-  width: 100%;
-  background-color: yellow;
-  color: black;
-}
 
-header {
-  position: fixed;
-  width: 100%;
-  /*top: 10px;
-  left: 10px;*/
-}
-
-section,
-section > div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: #EFEFEF;
-}
-
-.full-screen {
-  height: 100%;
-  /* makes panels the entire window height */
-}
-
-.blue {
-  background-color: #3883d8;
-}
-
-.red {
-  background-color: #cf3535;
-}
-.black {
-  background-color: #000000;
-  color: #ffffff;
-}
-
-#fadein-trigger > div {
-  height: 400px;
-  opacity: 0;
-}

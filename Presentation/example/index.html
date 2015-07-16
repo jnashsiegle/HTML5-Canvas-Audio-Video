@@ -4,45 +4,71 @@
 	<head>
 		<meta charset = "UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<title> ScrollMagic Examples </title>
+		<title> scrollTo/localScroll </title>
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+		<link rel = "stylesheet" href = "css/normalize302.css">
 		<link rel = "stylesheet" href = "css/style.css">
-		<script src = "https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script><!--legacy browser support-->
-		
-
-        
+		<script src = "https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script><!--legacy browser support-->	
 	</head>
 	<body>
-		<header role="banner">
-			<nav><a href = "#">This is an example of navigation fade-in</a></nav>
-		  	<h1>Examples</h1>
-		</header>
+	<header>
+		<h1>jquery.localScroll</h1>
+		<h2 class = "title">A Unique Navigation Experience</h2>		
+	</header>
 
-		<main class="full-screen" role="main">
-  <section class="full-screen blue">
-    <div>
-      <h1>Fade In Fade out</h1>
-    </div>
-  </section>
 
-  <section id="fadein-trigger" class="red">
-    <div>
-      <h1>Fadein Trigger</h1>
-      <p>This text will fade in and fade out as you scroll…yo!</p>
-    </div>
-  </section>
-  
-  <section class="full-screen blue" id="fadeout-trigger">
-    <div>
-      <h1>Fadeout Trigger</h1>
-    </div>
-  </section>
-</main>
+			
+		<div id = "main">
+		<nav>				
+				<ul>
+					<li><a href = "#1">Fruit</a> |</li>
+					<li><a href = "#grapes">Grapes</a> |</li>
+					<li><a href = "#oranges">Oranges</a> |</li>
+					<li><a href = "#cantalopes">Cantalopes</a></li>
+				</ul>
+			</nav>			
+			<section id = "content">
+				<article class = "category">
+					<ul>
+						<li class = "item" id = "1">
+							<h2>Fruit</h2>
+							<p>In botany, a fruit is a part of a flowering plant that derives from specific tissues of the flower, one or more ovaries, and in some cases accessory tissues.</p>
+							<p>Fruits are the means by which these plants disseminate seeds. Many of them that bear edible fruits, in particular, have propagated with the movements of humans and animals in a symbiotic relationship as a means for seed dispersal and nutrition, respectively; in fact, humans and many animals have become dependent on fruits as a source of food.</p>
+							<a href = "#grapes" class = "next">&gt;&gt</a>
+						</li>
+						<li class = "item" id = "grapes">
+							<h2>Grapes</h2>
+							<p>A grape is a fruiting berry of the deciduous woody vines of the botanical genus Vitis.</p>
+							<p>Grapes can be eaten raw or they can be used for making wine, jam, juice, jelly, grape seed extract, raisins, vinegar, and grape seed oil. Grapes are a non-climacteric type of fruit, generally occurring in clusters.</p>
+							<a href = "#1" class = "prev">&lt;&lt;</a>
+							<a href = "#oranges" class = "next">&gt;&gt;</a>
+						</li>
+						<li class = "item" id = "oranges">
+							<h2>Oranges</h2>
+							<p>Juicy and sweet and renowned for its concentration of vitamin C, oranges make the perfect snack and add a special tang to many recipes; it is no wonder that they are one of the most popular fruits in the world. Oranges are generally available from winter through summer with seasonal variations depending on the variety.</p>
+							<p>Oranges are round citrus fruits with finely-textured skins that are, of course, orange in color just like their pulpy flesh; the skin can vary in thickness from very thin to very thick. Oranges usually range from approximately two to three inches in diameter. </p>
+							<a href = "#grapes" class = "prev">&lt;&lt;</a>
+							<a href = "#cantalopes" class = "next">&gt;&gt;</a>
+						</li>
+							<li class = "item" id = "cantalopes">
+								<h2>Cantalope</h2>
+								<p>Cantaloupes and other summer melons serve as the quintessential take-along snack for summer picnics and barbeques. Their high water content helps ward off dehydration and combat the heat while their refreshing taste provides a guilt-free, low maintenance dessert for kids and adults alike. The mildly sweet and juicy flavor of cantaloupe makes it a perfect fruit for even the pickiest palates.</p>	
+								<p>Cantaloupes are also commonly known as muskmelons, mush melons, rock melons and Persian melons. </p>
+								<a href = "#oranges" class = "prev">&lt;&lt;</a>
+							</li>
+					</ul>
+
+
+</article>
+</section>
+</div>
+
+	
 		
-
+<footer>
+	<p>&copy;2015, Jana Nash-Siegle</p>
+</footer>
 		
 
 
@@ -50,16 +76,10 @@
 
 
 				
-		<footer>
-	            <p>&copy;2015, Jana Nash-Siegle</p>
-	    </footer>
-	    <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script> 
-	    <script src = "https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js"></script>
-	    <script src="includes/scrollmagic/minified/ScrollMagic.min.js"></script>
-	    <script src = "includes/scrollmagic/minified/plugins/animation.gsap.min.js"></script>
-	    <script src="includes/scrollmagic/minified/plugins/animation.gsap.min.js"></script><!-- Dev only -->
-	    
-	    <script src="includes/main.js"></script><!-- scripts.js, main.js, etc. -->
-	 	<script src = "https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script><!--min/max width polyfill for responsive -->
+		
+	<script type = "text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.js"></script>
+	<script type="text/javascript" src="includes/plugins/jquery.scrollTo.min.js"></script>
+	<script type="text/javascript" src="includes/plugins/jquery.localScroll.min.js"></script></script>
+	<script type = "text/javascript" src = "includes/main.js"></script>
 	</body>
 </html>
