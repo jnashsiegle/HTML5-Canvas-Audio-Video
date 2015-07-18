@@ -13,21 +13,25 @@
 	</head>
 	<body>
 	<header>
-		<h1>jquery.localScroll</h1>
+		<h1 class = "item" id = "jquery">jquery.localScroll</h1>
 		<h2 class = "title">A Unique Navigation Experience</h2>		
 	</header>
 
 
 			
-		<div id = "main">
+		<div class = "item" id = "main">
+		
 		<nav>				
 				<ul>
 					<li><a href = "#1">Fruit</a> |</li>
 					<li><a href = "#grapes">Grapes</a> |</li>
 					<li><a href = "#oranges">Oranges</a> |</li>
-					<li><a href = "#cantalopes">Cantalopes</a></li>
+					<li><a href = "#cantaloupes">Cantaloupes</a> |</li>
+					<li><a href = "#imageGrape">iGrape</a> |</li>
+					<li><a href = "#imageOrange">iOrange</a></li>
 				</ul>
-			</nav>			
+			</nav>	
+
 			<section id = "content">
 				<article class = "category">
 					<ul>
@@ -49,24 +53,47 @@
 							<p>Juicy and sweet and renowned for its concentration of vitamin C, oranges make the perfect snack and add a special tang to many recipes; it is no wonder that they are one of the most popular fruits in the world. Oranges are generally available from winter through summer with seasonal variations depending on the variety.</p>
 							<p>Oranges are round citrus fruits with finely-textured skins that are, of course, orange in color just like their pulpy flesh; the skin can vary in thickness from very thin to very thick. Oranges usually range from approximately two to three inches in diameter. </p>
 							<a href = "#grapes" class = "prev">&lt;&lt;</a>
-							<a href = "#cantalopes" class = "next">&gt;&gt;</a>
+							<a href = "#cantaloupes" class = "next">&gt;&gt;</a>
 						</li>
-							<li class = "item" id = "cantalopes">
-								<h2>Cantalope</h2>
+							<li class = "item" id = "cantaloupes">
+								<h2>Cantaloupe</h2>
 								<p>Cantaloupes and other summer melons serve as the quintessential take-along snack for summer picnics and barbeques. Their high water content helps ward off dehydration and combat the heat while their refreshing taste provides a guilt-free, low maintenance dessert for kids and adults alike. The mildly sweet and juicy flavor of cantaloupe makes it a perfect fruit for even the pickiest palates.</p>	
 								<p>Cantaloupes are also commonly known as muskmelons, mush melons, rock melons and Persian melons. </p>
 								<a href = "#oranges" class = "prev">&lt;&lt;</a>
+								<a href = "#imageGrape" class = "next">&gt;&gt;</a>
+							</li>
+							<li class = "item" id = "imageGrape">
+							<img src = "images/grapes.jpg" alt = "Delicious Grapes">
+							<a href = "#cantaloupes" class = "prev">&lt;&lt;</a>
+								<a href = "#imageOrange" class = "next">&gt;&gt;</a>
+							</li>
+							<li class = "item" id = "imageOrange">
+							<img src = "images/oranges.jpg" alt = "Delicious Oranges">
+							<a href = "#imageOrange" class = "prev">&lt;&lt;</a>
+								<a href = "#special" class = "next">&gt;&gt;</a>
 							</li>
 					</ul>
+
+					<p class = "item" id = "special">Here I am</p> <!--even though it can't be seen it can be scrolled to -->
+					<a href = "#imageOrange" class = "prev">&lt;&lt;</a>
+								<a href = "#1" class = "next">&gt;&gt;</a>
 
 
 </article>
 </section>
+<nav id = "bottom">				
+				<ul>
+					<li><a href = "#footer">bottom</a> |</li>
+					<li><a href = "#jquery">Top</a> |</li>
+					<li><a href = "#special">Special</a> |</li>
+					
+				</ul>
+			</nav>	
 </div>
 
 	
 		
-<footer>
+<footer id = "footer">
 	<p>&copy;2015, Jana Nash-Siegle</p>
 </footer>
 		
