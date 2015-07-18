@@ -15,7 +15,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/beige.css" id="theme">
+		<link rel="stylesheet" href="css/theme/blood.css" id="theme">
+		<link rel = "stylesheet" href = "css/main.css">
 
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="css/highlight/styles/atelier-forest.dark.css">
@@ -24,9 +25,7 @@
 		<script>
 			var link = document.createElement( 'link' );
 			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
+			link.type = 'text/css';			
 		</script>
 
 		<!--[if lt IE 9]>
@@ -40,51 +39,126 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section>
-					<h1>localScroll | scrollTo jQuery Plugins </h1>
-					<h3>A Presentation Developed for WIA</h3>
+				<section data-background="images/navigationFull.jpg" databackground-color: rgba(255, 255, 255, .5)>
+					<h2>localScroll | scrollTo jQuery Plugins </h1>
+					<h4>A Presentation Developed for WIA</h3>
+					<h5>Eric Silvay, Instructor</h4>
 					<p>
-						<small>Created by <a href="http://hakim.se">Jana Nash-Siegle</a> / <a href="http://twitter.com/hakimel">@JLSiegle</a></small>
+						<small>Created by <a href="http://jlsdesk.com">Jana Nash-Siegle</a> / <a href="http://twitter.com/@JLSiegle">@JLSiegle</a></small>
 					</p>
 				</section>
 
-				<section>
-					<h2>Hello There</h2>
+				<section data-background="images/navigationFull.jpg" >
+					<h2>jQuery <a href = "https://github.com/flesler/jquery.scrollTo" target = "_blank">ScrollTo.js by Ariel Flesler</a></h2>
 					<p>
-						reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will show you examples of what it can do.
+						This plug-in is designed to give the user</p>
+						<p class="fragment grow fragment highlight-red"> smooth-scrolling</p>
+						<p class = "fragment shrink fragment highlight-blue"> and animated</p>
+						<p> anchor navigation. No more jumping around!</p>
 					</p>
 				</section>
 
 				<!-- Example of nested vertical slides -->
 				<section>
-					<section>
-						<h2>Vertical Slides</h2>
-						<p>Slides can be nested inside of each other.</p>
-						<p>Use the <em>Space</em> key to navigate through all slides.</p>
-						<br>
-						<a href="#" class="navigate-down">
+					<section data-background-video="images/countdown.mp4">
+						
+						 
+						<!--<a href="#" class="navigate-down">
 							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
+						</a>-->
 					</section>
+					
 					<section>
-						<h2>Basement Level 1</h2>
-						<p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
-					</section>
-					<section>
-						<h2>Basement Level 2</h2>
-						<p>That's it, time to go back up.</p>
+						<h2>What is it's purpose?</h2>
+						<p>jQuery.scrollTo's signature is designed to resemble <pre><code>[$().animate()](http://api.jquery.com/animate/).</code></pre></p>
 						<br>
-						<a href="#/2">
+						<!--<a href="#/2">
 							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
-						</a>
+						</a> -->
 					</section>
+					<section>
+						<h2>Installation Directions</h2>
+				
+						<p>You will need to have a copy of both localScroll and scrollTo plugins linked to your index.html file, you will also need the latest jQuery file.  Both are available via Github at <a href = "https://github.com/flesler/jquery.localScroll">localScroll.js</a> and <a href = "https://github.com/flesler/jquery.scrollTo">scrollTo.js</a>.  They are also hosted on various CDN's, you can find this information on their pages.
+						<pre><code>
+&lt;script type = &quot;text/javascript&quot; src=&quot;https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;includes/plugins/jquery.scrollTo.min.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;includes/plugins/jquery.localScroll.min.js&quot;&gt;&lt;/script&gt;
+&lt;script type = &quot;text/javascript&quot; src = &quot;includes/main.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+						</code></pre>
+					</section>
+					<section>
+					<h2>How do I use it?</h2>
+<pre><code>jQuery(function( $ ){
+      /**
+       * Most jQuery.localScroll's settings, actually belong to jQuery.ScrollTo, check it's demo for an example of each option.
+       * @see http://demos.flesler.com/jquery/scrollTo/
+       * You can use EVERY single setting of jQuery.ScrollTo, in the settings hash you send to jQuery.localScroll.
+       */
+      
+      // The default axis is 'y', but in this demo, I want to scroll both
+      // You can modify any default like this
+      $.localScroll.defaults.axis = 'xy';
+      
+      /**
+       * NOTE: I use $.localScroll instead of $('#navigation').localScroll() so I
+       * also affect the &gt;&gt; and &lt;&lt; links. I want every link in the page to scroll.
+       */
+      $.localScroll({
+        target: '#content', // could be a selector or a jQuery object too.
+        queue:true,
+        duration:2000,
+        hash:true,
+        onBefore:function( e, anchor, $target ){
+          // The 'this' is the settings object, can be modified
+        },
+        onAfter:function( anchor, settings ){
+          // The 'this' contains the scrolled element (#content)
+        }
+      });
+    });
+</code></pre>								
+					</section>
+					<section>
+						<h2>_Target</h2>
+					<p>This defines the position to where `element` must be scrolled. The plugin supports all these formats:</p>
+					<ul>
+					<li class = "fragment"> A number with a fixed position: `250`</li>
+ <li class = "fragment">A string with a fixed position with px: `"250px"`</li>
+ <li class = "fragment">A string with a percentage (of container's size): `"50%"`</li>
+ <li class = "fragment">A string with a relative step: `"+=50px"`</li>
+ <li class = "fragment">An object with `left` and `top` containining any of the aforementioned: `{left:250, top:"50px"}`</li>
+ </ul>
+ </section>
+ <section>
+ <ul>
+<li class = "fragment"> The string `"max"` to scroll to the end.</li>
+ <li class = "fragment">A string selector that will be relative to the element to scroll: `".section:eq(2)"`</li>
+ <li class = "fragment">A DOM element, probably a child of the element to scroll: <code><pre>`document.<getElementById("top")`</pre></code></li>
+ <li class = "fragment">A jQuery object with a DOM element: `$("#top")`</li>
+ </ul>
+				</section>
 				</section>
 
+
 				<section>
-					<h2>Slides</h2>
-					<p>
-						Not a coder? Not a problem. There's a fully-featured visual editor for authoring these, try it out at <a href="http://slides.com" target="_blank">http://slides.com</a>.
-					</p>
+					<h2>Settings</h2>
+					<p>	The `duration` parameter is a shortcut to the setting with the same name.  These are the supported settings:</p>
+					<ul>
+					<li class = "fragment">__axis__: The axes to animate: `xy` (default), `x`, `y`, `yx`</li>
+ <li class = "fragment">* __interrupt__: If `true` will cancel the animation if the user scrolls. Default is `false`</li>
+<li class = "fragment"> __limit__: If `true` the plugin will not scroll beyond the container's size. Default is `true`</li>
+ <li class = "fragment">__margin__: If `true`, subtracts the margin and border of the `target` element. Default is `false`</li>
+<li class = "fragment"> __offset__: Added to the final position, can be a number or an object with `left` and `top`</li>
+ <li class = "fragment">__over__: Adds a % of the `target` dimensions: `{left:0.5, top:0.5}`</li>
+ </ul>
+ </section>
+ 				<section>
+ 				<ul>
+ <li class = "fragment">__queue__: If `true` will scroll one `axis` and then the other. Default is `false`</li>
+<li class = "fragment"> __onAfter(target, settings)__: A callback triggered when the animation ends (jQuery's `complete()`)</li>
+ <li class = "fragment">__onAfterFirst(target, settings)__: A callback triggered after the first axis scrolls when queueing</li>
 				</section>
 
 				<section>
@@ -195,7 +269,7 @@
 						<h2>Tiled Backgrounds</h2>
 						<pre><code style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
 					</section>
-					<section data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4,https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.webm" data-background-color="#000000">
+					<section data-background-video="images/countdown.mp4" data-background-color="#000000">
 						<div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
 							<h2>Video Backgrounds</h2>
 							<pre><code style="word-wrap: break-word;">&lt;section data-background-video="video.mp4,video.webm"&gt;</code></pre>
@@ -324,8 +398,7 @@ function linkify( selector ) {
 
 				<section>
 					<h2>Export to PDF</h2>
-					<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, here's an example:</p>
-					<iframe src="//www.slideshare.net/slideshow/embed_code/42840540" width="445" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+					
 				</section>
 
 				<section>
@@ -387,12 +460,26 @@ Reveal.addEventListener( 'customevent', function() {
 			// Full list of configuration options available at:
 			// https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
+				// Parallax background image
+			    parallaxBackgroundImage: 'images/navigation.jpg', // e.g. "https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg"
+
+			    // Parallax background size
+			    parallaxBackgroundSize: '4200px 3432px', // CSS syntax, e.g. "2100px 900px" - currently only pixels are supported (don't use % or auto)
+
+			    // Amount of pixels to move the parallax background per slide step,
+			    // a value of 0 disables movement along the given axis
+			    // These are optional, if they aren't specified they'll be calculated automatically
+			    parallaxBackgroundHorizontal: 800,
+			    parallaxBackgroundVertical: 1600,
+			    backgroundTransition: 'zoom',
+			    
+
 				controls: true,
 				progress: true,
 				history: true,
 				center: true,
 
-				transition: 'slide', // none/fade/slide/convex/concave/zoom
+				transition: 'zoom', // none/fade/slide/convex/concave/zoom
 
 				// Optional reveal.js plugins
 				dependencies: [

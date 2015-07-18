@@ -16,7 +16,7 @@ jQuery(function( $ ){
       $.localScroll({
         target: '#content', // could be a selector or a jQuery object too.
         queue:true,
-        duration:1000,
+        duration:2000,
         hash:true,
         onBefore:function( e, anchor, $target ){
           // The 'this' is the settings object, can be modified
