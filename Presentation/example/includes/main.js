@@ -15,11 +15,12 @@ jQuery(function( $ ){
        */
       $.localScroll({
         target: '#content', // could be a selector or a jQuery object too.
-        queue:false,
+        queue:true,
         duration:1000,
         hash:true, 
         easing: 'swing', 
-        offset: 0,    
+        offset: 0,
+        limit: true,    
         
         onBefore:function( e, anchor, $target ){         
 
@@ -27,7 +28,7 @@ jQuery(function( $ ){
         },
         onAfter:function( anchor, settings ){          
 
-        //alert('Scrolling has now completed.');
+          //alert('Scrolling has now completed.');
         }
         
       });

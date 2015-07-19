@@ -1,9 +1,7 @@
 <!doctype html>
-
 <html class = "no-js">  <!--works with modernizr -->
 	<head>
-		<meta charset = "UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta charset = "UTF-8">		
 		<title> scrollTo/localScroll </title>
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,13 +13,9 @@
 	<header>
 		<h1 class = "item" id = "jquery">jquery.localScroll</h1>
 		<h2 class = "title">A Unique Navigation Experience</h2>		
-	</header>
-
-
-			
-		<div class = "item" id = "main">
-		
-		<nav>				
+	</header>			
+		<div class = "item" id = "main">		
+			<nav>				
 				<ul>
 					<li><a href = "#1">Fruit</a> |</li>
 					<li><a href = "#grapes">Grapes</a> |</li>
@@ -31,15 +25,15 @@
 					<li><a href = "#imageOrange">iOrange</a></li>
 				</ul>
 			</nav>	
-
 			<section id = "content">
+			<h2>An Example of Scrolling Fruit</h2>
 				<article class = "category">
 					<ul>
 						<li class = "item" id = "1">
 							<h2>Fruit</h2>
 							<p>In botany, a fruit is a part of a flowering plant that derives from specific tissues of the flower, one or more ovaries, and in some cases accessory tissues.</p>
 							<p>Fruits are the means by which these plants disseminate seeds. Many of them that bear edible fruits, in particular, have propagated with the movements of humans and animals in a symbiotic relationship as a means for seed dispersal and nutrition, respectively; in fact, humans and many animals have become dependent on fruits as a source of food.</p>
-							<a href = "#grapes" class = "next">&gt;&gt</a>
+							<a href = "#grapes" class = "next">&gt;&gt;</a>
 						</li>
 						<li class = "item" id = "grapes">
 							<h2>Grapes</h2>
@@ -55,58 +49,44 @@
 							<a href = "#grapes" class = "prev">&lt;&lt;</a>
 							<a href = "#cantaloupes" class = "next">&gt;&gt;</a>
 						</li>
-							<li class = "item" id = "cantaloupes">
-								<h2>Cantaloupe</h2>
-								<p>Cantaloupes and other summer melons serve as the quintessential take-along snack for summer picnics and barbeques. Their high water content helps ward off dehydration and combat the heat while their refreshing taste provides a guilt-free, low maintenance dessert for kids and adults alike. The mildly sweet and juicy flavor of cantaloupe makes it a perfect fruit for even the pickiest palates.</p>	
-								<p>Cantaloupes are also commonly known as muskmelons, mush melons, rock melons and Persian melons. </p>
-								<a href = "#oranges" class = "prev">&lt;&lt;</a>
-								<a href = "#imageGrape" class = "next">&gt;&gt;</a>
-							</li>
-							<li class = "item" id = "imageGrape">
+						<li class = "item" id = "cantaloupes">
+							<h2>Cantaloupe</h2>
+							<p>Cantaloupes and other summer melons serve as the quintessential take-along snack for summer picnics and barbeques. Their high water content helps ward off dehydration and combat the heat while their refreshing taste provides a guilt-free, low maintenance dessert for kids and adults alike. The mildly sweet and juicy flavor of cantaloupe makes it a perfect fruit for even the pickiest palates.</p>	
+							<p>Cantaloupes are also commonly known as muskmelons, mush melons, rock melons and Persian melons. </p>
+							<a href = "#oranges" class = "prev">&lt;&lt;</a>
+							<a href = "#imageGrape" class = "next">&gt;&gt;</a>
+						</li>
+						<li class = "item" id = "imageGrape">
 							<img src = "images/grapes.jpg" alt = "Delicious Grapes">
 							<a href = "#cantaloupes" class = "prev">&lt;&lt;</a>
 								<a href = "#imageOrange" class = "next">&gt;&gt;</a>
-							</li>
-							<li class = "item" id = "imageOrange">
+						</li>
+						<li class = "item" id = "imageOrange">
 							<img src = "images/oranges.jpg" alt = "Delicious Oranges">
 							<a href = "#imageOrange" class = "prev">&lt;&lt;</a>
-								<a href = "#special" class = "next">&gt;&gt;</a>
-							</li>
+							<a href = "#special" class = "next">&gt;&gt;</a>
+						</li>
 					</ul>
-
 					<p class = "item" id = "special">Here I am</p> <!--even though it can't be seen it can be scrolled to -->
-					<a href = "#imageOrange" class = "prev">&lt;&lt;</a>
-								<a href = "#1" class = "next">&gt;&gt;</a>
+						<a href = "#imageOrange" class = "prev">&lt;&lt;</a>
+						<a href = "#1" class = "next">&gt;&gt;</a>
+			</article>
+		</section>
+				<nav id = "bottom">				
+					<ul>
+						<li><a href = "#footer">bottom</a> |</li>
+						<li><a href = "#jquery">Top</a> |</li>
+						<li><a href = "#special">Special</a> |</li>	
+					</ul>
+				</nav>	
+		</div>
+		<footer id = "footer">
+			<p>&copy;2015, Jana Nash-Siegle</p>
+		</footer>
 
-
-</article>
-</section>
-<nav id = "bottom">				
-				<ul>
-					<li><a href = "#footer">bottom</a> |</li>
-					<li><a href = "#jquery">Top</a> |</li>
-					<li><a href = "#special">Special</a> |</li>
-					
-				</ul>
-			</nav>	
-</div>
-
-	
-		
-<footer id = "footer">
-	<p>&copy;2015, Jana Nash-Siegle</p>
-</footer>
-		
-
-
-
-
-
-				
-		
-	<script type = "text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.js"></script>
-	<script type="text/javascript" src="includes/plugins/jquery.scrollTo.min.js"></script>
-	<script type="text/javascript" src="includes/plugins/jquery.localScroll.min.js"></script></script>
-	<script type = "text/javascript" src = "includes/main.js"></script>
+		<script type = "text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.js"></script>
+		<script type="text/javascript" src="includes/plugins/jquery.scrollTo.min.js"></script>
+		<script type="text/javascript" src="includes/plugins/jquery.localScroll.min.js"></script>
+		<script type = "text/javascript" src = "includes/main.js"></script>
 	</body>
 </html>
