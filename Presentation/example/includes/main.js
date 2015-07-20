@@ -24,11 +24,11 @@ jQuery(function( $ ){
         
         onBefore:function( e, anchor, $target ){         
 
-          //alert("Scrolling will now begin.");
+          //alert("See!  I popup before the scrolling begins!!.");
         },
         onAfter:function( anchor, settings ){          
 
-          //alert('Scrolling has now completed.');
+          //alert('And now, I popup after the scrolling ends!!.');
         }
         
       });
