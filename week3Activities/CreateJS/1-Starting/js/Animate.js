@@ -62,12 +62,12 @@ window.onload = function() {
 
 			// getTicks()  - that returns the current of ticks
 			// the divided number controls the speed and * number is the distance away from the center point.
-			//bmp.x = centerX + Math.sin(createjs.Ticker.getTicks()/20)*50;
-			//bmp.y = centerY + Math.sin(createjs.Ticker.getTicks()/2)*50;
+			bmp.x = centerX + Math.sin(createjs.Ticker.getTicks()/20)*50;
+			bmp.y = centerY + Math.sin(createjs.Ticker.getTicks()/2)*50;
 			
 			//Circle path
-			bmp.x = centerX + Math.sin(createjs.Ticker.getTicks()/7)*200;
-			bmp.y = centerY + Math.cos(createjs.Ticker.getTicks()/7)*20;
+			//bmp.x = centerX + Math.sin(createjs.Ticker.getTicks()/7)*200;
+			//bmp.y = centerY + Math.cos(createjs.Ticker.getTicks()/7)*20;
 			
 
 			stage.update();
