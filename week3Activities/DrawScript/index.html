@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>DrawScript</title>
+                
+        <style type = "text/css">
+        #Canvas1, #Canvas2 {
+        	border: dotted 3px black;
+        	background-color: lightgray;
+        }
+
+        </style>
+        <script>  
+        	window.onload = function(){
+                console.log('test canvas');
+        		var theCanvas = document.getElementById("Canvas1");  
+                        if (theCanvas && theCanvas.getContext) {
+                                var ctx = theCanvas.getContext("2d");
+                                if (ctx) {
+                                        //Begin Drawing here
+                                        //prefix will be ctx.
+                                       ctx.fillStyle="rgb(196,0,0)";
+                                        ctx.strokeStyle="rgb(0,0,0)";
+                                        ctx.lineWidth=1;
+                                        ctx.fillRect(27,22,228,102);
+                                        ctx.strokeRect(27,22,228,102);
+                                        ctx.fill();
+                                        ctx.stroke();
+
+                                        ctx.fillStyle="rgb(6,15,254)";
+                                        ctx.strokeStyle="rgb(0,0,0)";
+                                        ctx.lineWidth=1;
+                                        ctx.fillRect(214,96,289,102);
+                                        ctx.strokeRect(214,96,289,102);
+                                        ctx.fill();
+                                        ctx.stroke();
+
+                                        ctx.fillStyle="rgb(198,237,0)";
+                                        ctx.beginPath();
+                                        ctx.moveTo(316,160);
+                                        ctx.bezierCurveTo(314,160,313,162,313,164);
+                                        ctx.bezierCurveTo(313,165,314,167,316,167);
+                                        ctx.bezierCurveTo(317,167,319,165,319,164);
+                                        ctx.bezierCurveTo(319,162,317,160,316,160);
+                                        ctx.fill();
+
+                                        ctx.fillStyle="rgb(0,0,0)";
+                                        ctx.beginPath();
+                                        ctx.moveTo(372,170);
+                                        ctx.bezierCurveTo(371,171,371,172,371,172);
+                                        ctx.bezierCurveTo(370,172,370,173,370,173);
+                                        ctx.bezierCurveTo(369,173,369,172,369,172);
+                                        ctx.bezierCurveTo(369,171,369,171,369,170);
+                                        ctx.bezierCurveTo(369,169,369,168,369,167);
+                                        ctx.bezierCurveTo(369,153,361,150,349,150);
+                                        ctx.lineTo(342,150);
+                                        ctx.lineTo(342,158);
+                                        ctx.bezierCurveTo(342,159,341,160,340,160);
+                                        ctx.lineTo(339,159);
+                                        ctx.lineTo(324,144);
+                                        ctx.bezierCurveTo(324,144,324,144,324,143);
+                                        ctx.lineTo(324,142);
+                                        ctx.lineTo(339,127);
+                                        ctx.lineTo(340,126);
+                                        ctx.bezierCurveTo(341,126,342,127,342,128);
+                                        ctx.lineTo(342,136);
+                                        ctx.lineTo(349,136);
+                                        ctx.bezierCurveTo(358,136,370,137,374,147);
+                                        ctx.bezierCurveTo(375,150,375,154,375,157);
+                                        ctx.bezierCurveTo(375,161,373,166,372,170);
+                                        ctx.fill();  
+                                }
+                        }
+                }                   
+        </script>
+
+	</head>
+	<body>
+		<h1>Second DrawScript Example Using Canvas</h1>
+		<p>This document contains our first DrawScript example</p>
+
+		<canvas id = "Canvas1" width = "700" height = "300">
+			Your browser does not support Canvas.
+		</canvas>
+
+                <h1>First DrawScript Example Using create.js</h1>
+                <p>This document contains our first DrawScript example</p>
+
+                <canvas id = "Canvas2" width = "800" height = "800">
+                        Your browser does not support Canvas.
+                </canvas>
+
+
+ 
+	</body>
+</html>

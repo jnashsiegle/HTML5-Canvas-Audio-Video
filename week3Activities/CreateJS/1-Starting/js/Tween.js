@@ -35,7 +35,6 @@ window.onload = function() {
 	//properties can be loop, useTicks, ignoreGlobal, boolean t or f, and more
 
 	var tween = createjs.Tween.get(ball, {loop:true})
-
 		.to({x:ball.x, y:canvas.height - 55, rotation:-360}, 1500, createjs.Ease.bounceOut)
 		.wait(1000)
 		.to({x:canvas.width -55, rotation:360}, 2500, createjs.Ease.bounceOut)
