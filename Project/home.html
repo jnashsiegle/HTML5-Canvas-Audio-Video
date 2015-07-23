@@ -11,25 +11,27 @@
         <script src = "includes/respond.min.js"></script>        
     </head>
 <body>
+    <header>
+        <img src = "img/J3CNRV22WR.jpg" alt = "scene with lighthouse">
+    </header>
 
-<nav>
-    <ul>
-        <li><a ng-href = "home.html">Home</a> |</li>
-        <li><a ui-sref = "company">Company</a> |</li>
-        <li><a ui-sref = "solution">Solutions</a> |</li>
-        <li><a ui-sref = "activism">Activism</a> |</li>
-        <li><a ui-sref = "gallery">Gallery</a> |</li>
-        <li><a ui-sref = "contact">Contact</a> |</li>
-    </ul>
-</nav>
+        <nav>
+            <ul>
+                <li><a ng-href = "home.html">Home</a></li>
+                <li><a ui-sref = "company">Company</a></li>
+                <li><a ui-sref = "solution">Solutions</a></li>
+                <li><a ui-sref = "activism">Activism</a></li>
+                <li><a ui-sref = "gallery">Gallery</a></li>
+                <li><a ui-sref = "contact">Contact</a></li>
+            </ul>
+        </nav>
 
-<!--This is where content will be displayed -->
-<div ui-view></div>
+        <!--This is where content will be displayed -->
+        <div ui-view></div>
 
 <script src = "includes/angular.min.js"></script>
 <script src="includes/angular-ui_route_min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28//angular-route.min.js"></script>
-
 <script src = "includes/nav.js"></script>
 
 </body>
