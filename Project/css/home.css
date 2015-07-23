@@ -1,0 +1,175 @@
+/*Jana Nash-Siegle
+WIA - Eric Silvay
+
+Colors:
+#9e6037  dark tan
+#ebc280  light tan
+#cabdaa  med gray
+#657036  dark olive green
+#c4c87b  light olive
+#ffeacd  cream
+*/
+/*Reset*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*Reset Finished*/
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+html, body{
+	background:url("../img/sand.jpg")  no-repeat fixed;
+	background-size: cover;
+	background-position: absolute;
+	min-height: 100%; 
+	min-width: 100%;
+	width: 100%;
+	height: 100%;
+	max-width: 1900px;
+	background-color: #ffeacd;	
+	margin: 0;	
+	overflow: hidden;
+}
+a {
+	text-decoration: none;
+}
+h1 {
+	font-family: 'Goudy Old Style', Garamond, 'Big Caslon', 'Times New Roman', serif;
+	font-size: 18px;
+	font-style: normal;
+	font-variant: small-caps;
+	font-weight: bold;
+	line-height: 19px;
+}
+h3 {
+	font-family: 'Goudy Old Style', Garamond, 'Big Caslon', 'Times New Roman', serif;
+	font-size: 17px;
+	font-style: normal;
+	font-variant: small-caps;
+	font-weight: bold;
+	line-height: 18px;
+}
+p {
+	font-family: 'Goudy Old Style', Garamond, 'Big Caslon', 'Times New Roman', serif;
+	font-size: 16px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 22px;
+}
+blockquote {
+	font-family: 'Goudy Old Style', Garamond, 'Big Caslon', 'Times New Roman', serif;
+	font-size: 21px;
+	font-style: normal;
+	font-variant: small-caps;
+	font-weight: bold;
+	line-height: 30px;
+}
+pre {
+	font-family: 'Goudy Old Style', Garamond, 'Big Caslon', 'Times New Roman', serif;
+	font-size: 16px;
+	font-style: normal;
+	font-variant: small-caps;
+	font-weight: bold;
+	line-height: 22.px;
+}
+/*++++++++Navigation++++++++*/
+ul {
+
+}
+li{
+	display:inline;
+	padding: 20px;
+}
+
+li a {
+	color: #657036;
+}
+li a:hover {	
+	padding: 10px;
+	background-color:#cabdaa;
+	border-radius: 10% 20%;
+	color: #9e6037;
+}
+
+/*+++++++++End Navigation +++++++++++++*/
+
+#tagline{
+	margin-left: 25px;
+	width: 300px;
+	font-family: 'Monospace', sans-serif;
+	text-transform: uppercase;
+}
+#upArc, #downArc{
+	font-size: 14px;	
+}
+#upArc{
+	margin-top:2%;
+	text-align: center;
+	color: black; 
+}
+#downArc{
+	margin-top:20%;
+	text-align: center;
+	color: black;   
+}
+footer{
+	position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+}
+footer p {
+	font-size: 150%;
+	font-weight: bold;
+	color: #000;
+}
+
+
+
