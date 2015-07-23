@@ -79,6 +79,8 @@ html, body{
 img{
 	float:left;
 	margin-top: 4%;
+	width: 100%;
+	max-width: 300px;
 }
 canvas {	
 	float:right;
@@ -161,12 +163,21 @@ pre {
 	margin: 0px 20% 0px 20%; 
 }
 ul{
-	margin-top: 200px;
-	margin-left: 150px;	
+	
+	margin-left: 25%;	
 	z-index:100000;	
 	font-family:'Goudy Old Style', Garamond, 'Big Caslon', 'Times New Roman', serif;
+	display: inline;
+
 }
 li {
+	margin-top: 5%;
+	display: inline-block;
+	font-size: 48px;
+	text-align: center;
+	line-height: 2;	
+	color: #ffeacd;
+	z-index:100000;
 	-webkit-transform: rotate(-35deg);
     -webkit-transform-origin: bottom left;
     -moz-transform: rotate(-35deg);
@@ -176,12 +187,7 @@ li {
     -o-transform: rotate(-35deg);
     -o-transform-origin: bottom left;
     transform: rotate(-35deg);
-    transform-origin: bottom left;
-	font-size: 48px;
-	text-align: center;
-	line-height: 2;	
-	color: #ffeacd;
-	z-index:100000;
+    transform-origin: bottom left;	
 }
 li a {
 	color: #ffeacd;
@@ -194,32 +200,38 @@ li a:hover {
 }
 #overlay {
     position: fixed;
-    top: 15%;
-    left: 35%;
-    width: 50%;
-    height: 50%;
+    top: 25%;    
+    width: 100%;
+    height: 25%;
     background-color: #000;
     filter:alpha(opacity=75);
     -moz-opacity:0.75;
     -khtml-opacity: 0.75;
     opacity: 0.75;
     z-index: 100;
-    border-radius: 10% 20%;
+    
 }
 #tagline{
+	margin-left: 25px;
 	width: 300px;
-	font-family: 'Quicksand', sans-serif;	
+	font-family: 'Monospace', sans-serif;
+	text-transform: uppercase;
+
 }
 #upArc, #downArc{
-	font-size: 18px;
+	font-size: 14px;	
 }
+
 #upArc{
 	margin-top:2%;
 	text-align: center;
+	color: black; 
 }
 #downArc{
 	margin-top:20%;
 	text-align: center;
+	color: black;
+   
 }
 footer{
 	position: absolute;
