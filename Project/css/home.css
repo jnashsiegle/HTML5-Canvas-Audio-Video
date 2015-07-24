@@ -156,9 +156,12 @@ nav ul li{
 nav ul li a {
 	color: #657036;
 }
-nav ul li:hover {		
+nav ul li:hover, {		
 	background-color:#cabdaa;	
 	color: #9e6037;
+}
+.active {
+	font-size: 200%;
 }
 
 /*+++++++++End Navigation +++++++++++++*/
