@@ -93,7 +93,15 @@ a {
 }
 h1 {
 	font-family: 'Goudy Old Style', Garamond, 'Big Caslon', 'Times New Roman', serif;
-	font-size: 18px;
+	font-size: 24px;
+	font-style: normal;
+	font-variant: small-caps;
+	font-weight: bold;
+	line-height: 19px;
+}
+h2 {
+	font-family: 'Goudy Old Style', Garamond, 'Big Caslon', 'Times New Roman', serif;
+	font-size: 20px;
 	font-style: normal;
 	font-variant: small-caps;
 	font-weight: bold;
@@ -101,7 +109,7 @@ h1 {
 }
 h3 {
 	font-family: 'Goudy Old Style', Garamond, 'Big Caslon', 'Times New Roman', serif;
-	font-size: 17px;
+	font-size: 18px;
 	font-style: normal;
 	font-variant: small-caps;
 	font-weight: bold;
@@ -125,7 +133,7 @@ blockquote {
 }
 pre {
 	font-family: 'Goudy Old Style', Garamond, 'Big Caslon', 'Times New Roman', serif;
-	font-size: 16px;
+	font-size: 14px;
 	font-style: normal;
 	font-variant: small-caps;
 	font-weight: bold;

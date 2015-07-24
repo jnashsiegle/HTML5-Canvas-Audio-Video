@@ -33,3 +33,5 @@ myLP.config(function($stateProvider, $urlRouterProvider) {
         //});
 
 })
+
+
