@@ -76,15 +76,15 @@ html, body{
 	margin: 0;	
 	overflow: hidden;
 }
-img{
+#lighthouse{
 	float:left;
-	margin-top: 4%;
+	margin-top: 2%;
 	width: 100%;
 	max-width: 300px;
 }
 canvas {	
 	float:right;
-	margin-top: 15%;
+	margin-top: 10%;
 	margin-right: 10%;
 	display: none;
 }

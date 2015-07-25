@@ -1,7 +1,7 @@
 window.onload = function() {
 			
 			//Canvas & Stage
-			var canvas=document.getElementById("canvas");
+			var canvas=document.getElementById("canvas1");
 			
 			var stage= new createjs.Stage(canvas);
 			
