@@ -55,6 +55,8 @@ table {
 }
 /*Reset Finished*/
 
+/*Basic Styling*/
+
 footer::after, section::after{
     content: "";
     display: table;
@@ -126,6 +128,8 @@ pre {
 div{
 	float: left;	
 }
+/*End Basic Styling*/
+
 #banner{
 	background: #ffeacd url(../img/LPD_banner.jpg) left center no-repeat;
 	height: 260px;
@@ -138,7 +142,7 @@ header h2, header p{
 header h2{
 	margin-top: 30px;
 }
-}
+
 article{
 	margin:30px 30px 0 30px;
 }
@@ -166,26 +170,55 @@ nav ul li:hover, {
 
 /*+++++++++End Navigation +++++++++++++*/
 
+/*+++++++Company Page +++++++++++++*/
+
+	/*+++++++++++++Staff+++++++++++++*/
+
+#staff_ctr {
+	width: 100%;
+	margin: 30px;
+	display: inline-block;
+	
+}
+.employee{
+	width: 25%;
+	text-align: center;
+	display: inline-block;
+	border: 1px solid black;
+	padding: 10px;
+}
+.employee img {
+	display: inline-block;	
+	width: 33%;
+	height: auto;
+	margin: 0 auto;
+	box-sizing: border-box;
+	padding: 10px;
+	border-radius: 50% 50% 50% 4%;
+
+}
+.circle_img {	
+	padding: 20px;
+	background: #c4c87b;
+	border-radius: 50% 50% 50% 4%;	
+}
+.circle_img:hover{
+	-webkit-transform: scale(2,2);
+    -moz-transform: scale(2,2);
+    transform: scale(2,2);
+    -webkit-transform: .3s ease-in;
+    -moz-transform: .3s ease-in;
+    transition: .3s ease-in;
+}
+
+
 /*+++++++++++++Content+++++++++++++++++*/
 div.ng-scope{
 	width: 85%;
 	background: #ffeacd;
 	margin-left: 50px;
-	
 }
-footer{
-	position: fixed;
-    left: 0;
-    bottom: 0;
-    height: 50px;
-    width: 100%;
-    text-align: center;
-}
-footer p {
-	font-size: 150%;
-	font-weight: bold;
-	color: #000;
-}
+
 
 
 

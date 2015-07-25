@@ -219,6 +219,8 @@ li a:hover {
     z-index: 100;
     
 }
+/*++++++++End of Navigation+++++++++++*/
+/*++++++++++Misc Elements++++++++++++*/
 #tagline{
 	margin-left: 25px;
 	width: 300px;
@@ -242,13 +244,11 @@ li a:hover {
    
 }
 footer{
-	position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 50px;
+	position: absolute;    
+    bottom: 0;    
     width: 100%;
     text-align: center;
-}
+  }
 footer p {
 	font-size: 150%;
 	font-weight: bold;
