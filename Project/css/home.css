@@ -124,9 +124,7 @@ pre {
 	font-weight: bold;
 	line-height: 22px;
 }
-div{
-	float: left;	
-} 
+ 
 /*End Basic Styling*/
 
 #banner{
@@ -220,6 +218,7 @@ div.ng-scope{
 	width: 75%;
 	background: #ffeacd;
 	margin-left: 50px;
+	float: left;
 }
 
 
