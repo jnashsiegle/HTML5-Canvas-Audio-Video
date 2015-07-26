@@ -18,8 +18,7 @@ small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
+caption,article, aside, canvas, details, embed, 
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
@@ -125,9 +124,9 @@ pre {
 	font-weight: bold;
 	line-height: 22px;
 }
-div{
+/*div{
 	float: left;	
-}
+}*/
 /*End Basic Styling*/
 
 #banner{
@@ -177,8 +176,7 @@ nav ul li:hover, {
 #staff_ctr {
 	width: 100%;
 	margin: 30px;
-	display: inline-block;
-	
+	display: inline-block;	
 }
 .employee{
 	width: 25%;
@@ -211,6 +209,11 @@ nav ul li:hover, {
     transition: .3s ease-in;
 }
 
+	/*++++End Staff++++++*/
+/*+++++End Company++++*/
+
+/*+++++++++++++Photo Gallery++++++++++++++*/
+
 
 /*+++++++++++++Content+++++++++++++++++*/
 div.ng-scope{
@@ -218,7 +221,6 @@ div.ng-scope{
 	background: #ffeacd;
 	margin-left: 50px;
 }
-
 
 
 
