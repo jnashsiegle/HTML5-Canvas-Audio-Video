@@ -78,8 +78,11 @@ html, body{
 a {
 	text-decoration: none;
 }
-h1, h2, h3, h4, p, blockquote, pre, li {
+h1, h2, h3, h4, blockquote, pre, li {
 	font-family: 'Goudy Old Style', Garamond, 'Big Caslon', 'Times New Roman', serif;
+}
+p {
+	font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
 }
 h1 {
 	font-size: 36px;
@@ -211,6 +214,38 @@ nav ul li:hover, {
 /*+++++End Company++++*/
 
 /*+++++++++++++Photo Gallery++++++++++++++*/
+#gallery{
+	width: 100%;
+    margin: 0 auto;    
+}
+#gallery h1, #gallery h2{
+	text-align: left;
+	margin-top: 30px;
+}
+#gallery article {
+    display: inline-block;
+    background: url("../img/gallery/photo.jpg") no-repeat top left;
+    background-size: contain;
+    width: 200px;
+    height: 230px;
+    padding: 15px 20px 40px 15px;
+    margin: 15px auto 0 auto;
+    overflow: hidden;
+}
+#gallery article img {
+    margin: 0 auto;
+    padding: 10px 5px;
+    border-radius: 50% 50% 50% 4%;
+}
+#gallery article p {
+    font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+    font-size: .950em;
+    margin-left: 10px;
+    letter-spacing: 2px;
+    font-variant: small-caps;
+    text-align: left;
+    padding-bottom: 15px;
+}
 
 
 /*+++++++++++++Content+++++++++++++++++*/
