@@ -78,10 +78,10 @@ html, body{
 a {
 	text-decoration: none;
 }
-h1, h2, h3, h4, blockquote, pre, li {
+h1, h2, h3, h4, blockquote,{
 	font-family: 'Goudy Old Style', Garamond, 'Big Caslon', 'Times New Roman', serif;
 }
-p {
+p, li, pre {
 	font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
 }
 h1 {
@@ -124,12 +124,10 @@ pre {
 	font-size: 14px;
 	font-style: normal;
 	font-variant: small-caps;
-	font-weight: bold;
+	
 	line-height: 22px;
-}
- 
+} 
 /*End Basic Styling*/
-
 #banner{
 	background: #ffeacd url(../img/LPD_banner.jpg) left center no-repeat;
 	height: 260px;
@@ -167,34 +165,27 @@ nav ul li:hover, {
 .active {
 	font-size: 200%;
 }
-
 /*+++++++++End Navigation +++++++++++++*/
-
 /*+++++++Company Page +++++++++++++*/
-
 	/*+++++++++++++Staff+++++++++++++*/
-
 #staff_ctr {
 	width: 100%;
 	margin: 30px;
 	display: inline-block;	
 }
 .employee{
-	width: 25%;
-	text-align: center;
-	display: inline-block;
-	border: 1px solid black;
-	padding: 10px;
+	background: url("../img/gallery/photo.jpg") no-repeat top left;
+	background-size: contain;
+    width: 300px;
+    height: 330px;
+    padding: 15px 20px 40px 15px;
+    margin: 15px auto 0 auto;
+    overflow: hidden;
 }
-.employee img {
-	display: inline-block;	
-	width: 33%;
-	height: auto;
+.employee img {	
 	margin: 0 auto;
-	box-sizing: border-box;
-	padding: 10px;
-	border-radius: 50% 50% 50% 4%;
-
+    padding: 10px 5px;
+    border-radius: 50% 50% 50% 4%;
 }
 .circle_img {	
 	padding: 20px;
@@ -209,7 +200,6 @@ nav ul li:hover, {
     -moz-transform: .3s ease-in;
     transition: .3s ease-in;
 }
-
 	/*++++End Staff++++++*/
 /*+++++End Company++++*/
 
@@ -218,11 +208,11 @@ nav ul li:hover, {
 	width: 100%;
     margin: 0 auto;    
 }
-#gallery h1, #gallery h2{
+#gallery h1, #gallery h2, {
 	text-align: left;
 	margin-top: 30px;
 }
-#gallery article {
+#gallery article, #staff_ctr article {
     display: inline-block;
     background: url("../img/gallery/photo.jpg") no-repeat top left;
     background-size: contain;
@@ -232,12 +222,23 @@ nav ul li:hover, {
     margin: 15px auto 0 auto;
     overflow: hidden;
 }
-#gallery article img {
+#staff_ctr article {
+	width: 250px;
+	height: 280px;
+	text-align: center;
+	line-height: 15px;
+}
+#gallery article img, #staff_ctr article img  {
     margin: 0 auto;
     padding: 10px 5px;
     border-radius: 50% 50% 50% 4%;
-  }
-#gallery article p, #gallery article a {
+}
+#staff_ctr article img{
+	background-color: #c4c87b;
+	margin-top: 5px;
+	
+}
+#gallery article p, #gallery article a, #staff_ctr article p {
     font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
     font-size: .950em;
     margin-left: 10px;
@@ -245,12 +246,12 @@ nav ul li:hover, {
     font-variant: small-caps;
     text-align: left;    
 }
-#gallery article p {
+#staff_ctr article p {
+	text-align: center;
+}
+#gallery article p, #staff_ctr article p {
 	margin-top: 0;  /*puts the title right below the href*/
 }
-
-
-
 /*+++++++++++++Content+++++++++++++++++*/
 div.ng-scope{
 	width: 75%;
