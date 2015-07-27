@@ -236,15 +236,17 @@ nav ul li:hover, {
     margin: 0 auto;
     padding: 10px 5px;
     border-radius: 50% 50% 50% 4%;
-}
-#gallery article p {
+  }
+#gallery article p, #gallery article a {
     font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
     font-size: .950em;
     margin-left: 10px;
     letter-spacing: 2px;
     font-variant: small-caps;
-    text-align: left;
-    padding-bottom: 15px;
+    text-align: left;    
+}
+#gallery article p {
+	margin-top: 0;  /*puts the title right below the href*/
 }
 
 
